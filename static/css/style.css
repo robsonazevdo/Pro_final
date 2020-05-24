@@ -1,0 +1,23 @@
+.row {
+    height: 30em;
+}
+
+.coluna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Titulo {
+    display: flex;
+    align-items: flex-end;
+    height: 210px;
+}
+
+.Titulo h1 {
+    color: #fff;
+}
+
+
+

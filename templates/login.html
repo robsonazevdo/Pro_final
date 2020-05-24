@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+{% endblock estilos %}
+
+{% block content%}
+<div class = "container">
+      <div class= "row">
+          <div class="col-12 col-md-6 coluna">
+          <img src="static/img/html5_css3.png" alt= "logo empresa"  height= "200">
+          </div>
+          <div class="col-12 col-md-6 coluna">
+            <form action="http://juliom6.pythonanywhere.com/contato" method="POST" class="text-center">
+                <h1 class="h3">Logar</h1>
+                <label for="id_email" class="sr-only">Email</label>
+                <input class="form-control m-2" type="text" id="id_email" placeholder="Insira um email" required autofocus name="email">
+                <label for="id_senha" class=sr-only>Senha</label>
+                <input class="form-control m-2" type="password" id="id_senha" placeholder="Insira a senha" required autofocus name="Senha">
+               <button type="submit" class="btn btn-primary">Fazer Login</button>
+            </form>
+         </div>
+      </div>
+{% endblock content%}

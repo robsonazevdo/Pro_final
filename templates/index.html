@@ -1,0 +1,54 @@
+{% extends '_base.html' %}
+
+  {% block title %}
+    Inicio
+  {% endblock title %}
+
+  {% block estilos %}
+  <link rel="stylesheet" type="text/css" href="/static/css/estilos.css">
+  {% endblock estilos %}
+
+  
+
+
+    {% block content %}
+    <object type="text/html" data="_base.html"/>
+        <div class="container d-flex justify-content-around align-items-center flex-wrap ">
+      <div class="item"> <!-- Para inseriri os dados do funcionario -->
+        <!-- titulo -->
+        <div id="titulo" class="text-primary primary h1 p-2">EMPRESA</div>
+        <!-- formulario -->
+        <form action="/funcionarios" method="POST">
+          <div class="form-group">
+            <label class="text-primary h4 m-4">Nome do Usuário</label>
+            <input type="text" name="nome" class="form-control text-center" autofocus>
+          </div>
+          <div>
+            <input type="submit" name="" style="display: none;">
+          </div>
+        </form>
+        <!-- relogio -->
+        <div id="relogio" class="text-black h1">00:00:00</div>
+      </div>
+
+      <!-- Para inserir a tabela -->
+      <div class="text-black h5 item"> <!-- Para visualizar os ultimos 20 funcionarios logados -->
+        <table class="table-white table-striped">
+          <!-- cabeçalho -->
+          <thead class="text-info">
+            <tr>
+              <th class="text-danger">Funcionario</th>
+              <th class="text-danger">Hora</th>
+            </tr>
+          </thead>
+          <!-- fim cabeçalho -->
+          <tbody id="lista">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endblock content %}
+
+    {% block scripts %}
+    <script src="/static/js/script.js"></script>
+    {% endblock scripts %}

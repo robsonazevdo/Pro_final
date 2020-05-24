@@ -1,0 +1,42 @@
+{% extends '_base.html' %}
+
+  {% block title %}
+  Contato
+  {% endblock title %}
+
+  {% block estilos%}
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+  {% endblock estilos%}
+
+  {% block content %}
+  <center>
+  <h1 class="mt-5 text-primary">Fale conosco</h1>
+  </center>
+  <div class= "container">
+      <div class= "row">
+          <div class="col-12 col-md-6 coluna">
+          <img src="static/img/html5_css3.png" alt= "logo empresa"  height= "200">
+      </div>
+
+          <div class="col-12 col-md-6 coluna">
+            <form action="/seus_dados" method="POST" class="text-center">
+            <div class="form-group">
+                <h1 class="h3">Seus dados</h1>
+                <label for="id_nome" class="sr-only">Nome</label>
+                <input class="form-control m-3" type="text" id="id_nome" placeholder="Nome*" required autofocus name="nome">
+                <label for="id_sobrenome" class="sr-only">Sobrenome</label>
+                <input class="form-control m-3" type="text" id="id_sobrenome" placeholder="Sobrenome*" required autofocus name="sobrenome">
+                <label for="id_email" class="sr-only">Email</label>
+                <input class="form-control m-3" type="text" id="id_email" placeholder="Email*" required autofocus name="email">
+                <label for="id_Assunto" class="sr-only">Assunto</label>
+                <input class="form-control m-3" type="text" id="id_Assunto" placeholder="Assunto*" required autofocus name="assunto">
+                <label for="id_mensagem" class="sr-only">Mensagm</label>
+                <textarea class="form-control m-3 " rows="7"  type="text" id="id_mensagem" placeholder="Mensagem*" required autofocus name="mensagem"></textarea>
+               <button type="submit" name="" class="btn btn-primary" >Enviar</button>
+               </div>
+            </form>
+         </div>
+      </div>
+  </div>  
+  {% endblock content %}
+   
